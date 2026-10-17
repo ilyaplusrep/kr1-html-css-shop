@@ -9,7 +9,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@700;900&family=Manrope:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya:wght@700;900&family=Manrope:wght@400;500;600;800&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
     <script src="js/main.js" defer></script>
@@ -22,7 +24,8 @@
         <nav class="site-nav" aria-label="Основная навигация">
             <ul class="site-nav__list">
                 <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
-                <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="catalog.html" aria-current="page">Каталог</a></li>
+                <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="catalog.html"
+                        aria-current="page">Каталог</a></li>
                 <li class="site-nav__item"><a class="site-nav__link" href="product.html">Товар</a></li>
                 <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
                 <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
@@ -44,62 +47,91 @@
 
                 <h3 class="filters__subtitle">Категория</h3>
                 <ul class="filters__list">
-                    <li><label class="filters__option"><input type="checkbox" name="category" value="office"> Офисные</label></li>
-                    <li><label class="filters__option"><input type="checkbox" name="category" value="gift"> Подарочные</label></li>
-                    <li><label class="filters__option"><input type="checkbox" name="category" value="premium"> Премиум</label></li>
-                    <li><label class="filters__option"><input type="checkbox" name="category" value="budget"> Для бедных</label></li>
+                    <li><label class="filters__option"><input type="checkbox" name="category" value="office">
+                            Офисные</label></li>
+                    <li><label class="filters__option"><input type="checkbox" name="category" value="gift">
+                            Подарочные</label></li>
+                    <li><label class="filters__option"><input type="checkbox" name="category" value="premium">
+                            Премиум</label></li>
+                    <li><label class="filters__option"><input type="checkbox" name="category" value="budget"> Для
+                            бедных</label></li>
                 </ul>
 
                 <h3 class="filters__subtitle">Наличие</h3>
                 <ul class="filters__list">
-                    <li><label class="filters__option"><input type="checkbox" name="stock" value="yes"> Только в наличии</label></li>
+                    <li><label class="filters__option"><input type="checkbox" name="stock" value="yes"> Только в
+                            наличии</label></li>
                 </ul>
             </aside>
 
             <section class="catalog__products" aria-label="Список товаров">
                 <article class="product-card">
+                    <img class="product-card__image" src="images/rock-1.webp" alt="Камень Обыкновенный" width="300"
+                        height="300">
                     <span class="product-card__badge">Хит</span>
+                    <p class="product-card__price">99 ₽</p>
                     <h3 class="product-card__title">Камень Обыкновенный</h3>
                     <p class="product-card__description">Классика. Серый, круглый, надёжный.</p>
-                    <p class="product-card__price">99 ₽</p>
-                    <a class="product-card__link" href="product.html">Подробнее</a>
+                    <div class="product-card__actions">
+                        <a class="product-card__link" href="product.html">Подробнее</a>
+                    </div>
                 </article>
 
                 <article class="product-card">
+                    <img class="product-card__image" src="images/rock-2.webp" alt="Большой камень" width="300"
+                        height="300">
                     <span class="product-card__badge">Новинка</span>
+                    <p class="product-card__price">4999 ₽</p>
                     <h3 class="product-card__title">Большой камень</h3>
                     <p class="product-card__description">Реально большой. Давит. Всегда рядом.</p>
-                    <p class="product-card__price">4999 ₽</p>
-                    <a class="product-card__link" href="product.html">Подробнее</a>
+                    <div class="product-card__actions">
+                        <a class="product-card__link" href="product.html">Подробнее</a>
+                    </div>
                 </article>
 
                 <article class="product-card">
+                    <img class="product-card__image" src="images/rock-3.webp" alt="Камень «Люкс»" width="300"
+                        height="300">
+                    <p class="product-card__price">9999 ₽</p>
                     <h3 class="product-card__title">Камень «Люкс»</h3>
                     <p class="product-card__description">Камень подороже. Временно закончился.</p>
-                    <p class="product-card__price">9999 ₽</p>
-                    <a class="product-card__link" href="product.html">Подробнее</a>
+                    <div class="product-card__actions">
+                        <a class="product-card__link" href="product.html">Подробнее</a>
+                    </div>
                 </article>
 
                 <article class="product-card">
+                    <img class="product-card__image" src="images/rock-4.webp" alt="Маленький камень" width="300"
+                        height="300">
+                    <p class="product-card__price">49 ₽</p>
                     <h3 class="product-card__title">Маленький камень</h3>
                     <p class="product-card__description">Маленький, бесполезный.</p>
-                    <p class="product-card__price">49 ₽</p>
-                    <a class="product-card__link" href="product.html">Подробнее</a>
+                    <div class="product-card__actions">
+                        <a class="product-card__link" href="product.html">Подробнее</a>
+                    </div>
                 </article>
 
                 <article class="product-card">
+                    <img class="product-card__image" src="images/rock-5.webp" alt="Камень с глазками" width="300"
+                        height="300">
                     <span class="product-card__badge">Скидка</span>
+                    <p class="product-card__price">199 ₽</p>
                     <h3 class="product-card__title">Камень с глазками</h3>
                     <p class="product-card__description">Смотрит на вас. Всегда.</p>
-                    <p class="product-card__price">199 ₽</p>
-                    <a class="product-card__link" href="product.html">Подробнее</a>
+                    <div class="product-card__actions">
+                        <a class="product-card__link" href="product.html">Подробнее</a>
+                    </div>
                 </article>
 
                 <article class="product-card">
+                    <img class="product-card__image" src="images/rock-6.webp" alt="Драгоценный камень" width="300"
+                        height="300">
+                    <p class="product-card__price">1999 ₽</p>
                     <h3 class="product-card__title">Драгоценный камень</h3>
                     <p class="product-card__description">На самом деле нет.</p>
-                    <p class="product-card__price">1999 ₽</p>
-                    <a class="product-card__link" href="product.html">Подробнее</a>
+                    <div class="product-card__actions">
+                        <a class="product-card__link" href="product.html">Подробнее</a>
+                    </div>
                 </article>
             </section>
         </div>
