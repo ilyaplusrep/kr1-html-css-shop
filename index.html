@@ -1,41 +1,110 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Каталог камней</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RockRockRock</title>
+    <meta name="description" content="Интернет-магазин камней.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya:wght@700;900&family=Manrope:wght@400;500;600;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-  <header>
-    <h1>Учебный интернет-магазин</h1>
-  </header>
+    <header class="site-header">
+        <a class="site-header__logo" href="index.html">RockRockRock</a>
 
-  <main>
-    <section>
-      <h2>Главная страница проекта</h2>
-      <p>
-        Это стартовая страница учебного frontend-проекта.
-        В дальнейшем здесь будет разработан многостраничный сайт
-        интернет-магазина или каталога услуг.
-      </p>
-    </section>
+        <nav class="site-nav">
+            <ul class="site-nav__list">
+                <li class="site-nav__item"><a class="site-nav__link site-nav__link--active"
+                        href="index.html">Главная</a></li>
+                <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+                <li class="site-nav__item"><a class="site-nav__link" href="product.html">Товар</a></li>
+                <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
+                <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <section>
-    <h2>О проекте</h2>
-    <p>
-        В рамках данного проекта будет разработан многостраничный сайт
-        интернет-магазина или каталога услуг. Проект будет постепенно
-        расширяться на следующих практических занятиях.
-    </p>
-    </section>
-    
-  </main>
 
-    
 
-  <footer>
-    <p>&copy; 2026 Учебный проект</p>
-  </footer>
+    <main class="page">
+        <section class="hero">
+            <p class="hero__label">Магазин №1 среди камней</p>
+            <h1 class="hero__title">Камни, которые <span class="hero__accent">ничего</span> не&nbsp;делают</h1>
+            <p class="hero__text">Не ломаются, не разряжаются, не требуют обновлений. Просто лежат. Идеально.</p>
+            <a class="button" href="catalog.html">Смотреть каталог</a>
+        </section>
+
+        <section class="advantages" id="advantages">
+            <h2 class="section-title">Почему наши камни</h2>
+            <ul class="advantages__list">
+                <li class="advantages__item">
+                    <h3 class="advantages__title">Вечная гарантия</h3>
+                    <p class="advantages__text">Он камень. С ним ничего не случится.</p>
+                </li>
+                <li class="advantages__item">
+                    <h3 class="advantages__title">Без подписки</h3>
+                    <p class="advantages__text">Камень не просит денег каждый месяц.</p>
+                </li>
+                <li class="advantages__item">
+                    <h3 class="advantages__title">Ноль уведомлений</h3>
+                    <p class="advantages__text">Самый тихий камень в вашей жизни.</p>
+                </li>
+            </ul>
+        </section>
+
+
+
+        <section class="popular" id="popular">
+            <h2 class="section-title">Хиты продаж</h2>
+
+            <div class="popular__grid">
+                <article class="product-card">
+                    <span class="product-card__badge">Хит</span>
+                    <h3 class="product-card__title">Камень Обыкновенный</h3>
+                    <p class="product-card__description">Классика. Серый, круглый, надёжный. Ничего лишнего.</p>
+                    <p class="product-card__price">99 ₽</p>
+                    <a class="product-card__link" href="product.html">Подробнее</a>
+                </article>
+
+                <article class="product-card">
+                    <span class="product-card__badge">Новинка</span>
+                    <h3 class="product-card__title">Большой камень</h3>
+                    <p class="product-card__description">Реально большой. Давит. Всегда рядом.</p>
+                    <p class="product-card__price">4999 ₽</p>
+                    <a class="product-card__link" href="product.html">Подробнее</a>
+                </article>
+
+                <article class="product-card">
+                    <h3 class="product-card__title">Камень «Люкс»</h3>
+                    <p class="product-card__description">Камень подороже.</p>
+                    <p class="product-card__price">999 ₽</p>
+                    <a class="product-card__link" href="product.html">Подробнее</a>
+                </article>
+            </div>
+        </section>
+
+        <aside class="promo">
+            <h2 class="promo__title">Камень дня</h2>
+            <p class="promo__text">Камень с глазками - скидка 20%. Он смотрит на вас. Купите его.</p>
+        </aside>
+    </main>
+
+
+
+
+
+    <footer class="site-footer" id="contacts">
+        <p class="site-footer__text">© 2026 RockRockRock. Все камни защищены.</p>
+        <p class="site-footer__text">Почта: rockrock@.rock · Телефон: +7 (900) 000-00-00</p>
+    </footer>
 </body>
+
 </html>

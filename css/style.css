@@ -1,27 +1,215 @@
-body {
+:root {
+  --color-bg: #f3ede2;
+  --color-surface: #ffffff;
+  --color-text: #141210;
+  --color-text-muted: #4a4540;
+  --color-accent: #e0643a;
+  --color-accent-2: #4fb3bf;
+  --color-border: #141210;
+
+  --font-text: "Manrope", sans-serif;
+  --font-title: "Alegreya", serif;
+
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 32px;
+  --space-xl: 64px;
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+}
+
+/* сброс стилей */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1, h2, h3,
+p,
+ul {
   margin: 0;
-  font-family: Arial, sans-serif;
-  line-height: 1.5;
 }
 
-header,
-main,
-footer {
-  padding: 20px;
+ul {
+  padding: 0;
+  list-style: none;
 }
 
-header {
-  background-color: #f2f2f2;
+img {
+  max-width: 100%;
+  display: block;
 }
 
-footer {
-  background-color: #f2f2f2;
+
+/* main */
+body {
+  font-family: var(--font-text);
+  font-width: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-bg);
 }
 
-section {
-  margin-bottom: 24px;
+h1, h2, h3 {
+  font-family: var(--font-title);
+  line-height: 1.15;
 }
 
-section h2 {
-  margin-top: 0;
+a {
+  color: inherit;
+}
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-md);
+}
+
+/* header, navlink, footer */
+
+.site-header {
+  padding: var(--space-md) var(--space-lg);
+  border-bottom: 3px solid var(--color-border);
+  background-color: var(--color-bg);
+}
+
+.site-header__logo {
+  font-family: var(--font-title);
+  font-size: 28px;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.site-nav__link {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.site-nav__link--active {
+  color: var(--color-accent);
+}
+
+.site-footer {
+  padding: var(--space-lg);
+  border-top: 3px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-size: 14px;
+}
+
+
+/* смешные заголовки */
+.hero {
+  padding: var(--space-xl) 0;
+}
+
+.hero__label {
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+}
+
+.hero__title {
+  font-size: 64px;
+  font-weight: 900;
+  margin: var(--space-md) 0;
+}
+
+.hero__accent {
+  display: inline-block;
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+  padding: 0 16px 6px;
+  transform: rotate(-2deg);
+}
+
+
+.hero__text {
+  font-size: 20px;
+  max-width: 560px;
+  margin-bottom: var(--space-lg);
+}
+
+.section-title {
+  font-size: 40px;
+  margin-bottom: var(--space-lg);
+}
+
+
+/* Секции, карточки, кнопки, боковая история */
+.advantages,
+.popular {
+  margin-bottom: var(--space-xl);
+}
+
+.advantages__item {
+  margin-bottom: var(--space-md);
+}
+
+.advantages__title {
+  font-size: 24px;
+}
+
+.product-card {
+  background-color: var(--color-surface);
+  border: 3px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  margin-bottom: var(--space-md);
+  box-shadow: 6px 6px 0 var(--color-border);
+}
+
+.product-card__badge {
+  display: inline-block;
+  background-color: var(--color-accent-2);
+  padding: 2px 10px;
+  font-size: 13px;
+  font-weight: 800;
+  transform: rotate(-2deg);
+  text-transform: uppercase;
+}
+
+.product-card__title {
+  font-size: 26px;
+  margin: var(--space-sm) 0;
+}
+
+.product-card__description {
+  color: var(--color-text-muted);
+}
+
+.product-card__price {
+  font-size: 22px;
+  font-weight: 800;
+  margin: var(--space-md) 0;
+}
+
+.product-card__link {
+  font-weight: 800;
+}
+
+.button {
+  display: inline-block;
+  padding: 14px 28px;
+  background-color: var(--color-text);
+  color: var(--color-bg);
+  font-weight: 800;
+  text-decoration: none;
+  border-radius: 999px;
+}
+
+.promo {
+  background-color: var(--color-accent-2);
+  border: 3px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+}
+
+.promo__title {
+  font-size: 32px;
+  margin-bottom: var(--space-sm);
 }
