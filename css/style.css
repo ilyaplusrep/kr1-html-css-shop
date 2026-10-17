@@ -8,7 +8,7 @@
   --color-text: #141210;
   --color-text-muted: #4a4540;
   --color-accent: #e0643a;
-  --color-accent-2: #4fb3bf;
+  --color-accent-2: #8fd16a;
   --color-border: #141210;
   --color-danger: #c62828;
   --color-danger-bg: #fdecea;
@@ -80,7 +80,7 @@ html {
 :target {
   outline: 3px dashed var(--color-accent);
   outline-offset: 8px;
-  scroll-margin-top: var(--space-lg);
+  scroll-margin-top: 100px;
 }
 
 body {
@@ -267,8 +267,7 @@ button.button {
   background-color: var(--color-surface);
   border: var(--border);
   border-radius: var(--radius-md);
-  padding: var(--space-lg);
-  margin-bottom: var(--space-md);
+  padding: var(--space-md);
   box-shadow: var(--shadow);
   transition: transform var(--transition), box-shadow var(--transition);
 }
@@ -290,7 +289,7 @@ button.button {
 }
 
 .product-card__title {
-  font-size: 26px;
+  font-size: 20px;
   margin: var(--space-sm) 0;
 }
 
@@ -310,10 +309,6 @@ button.button {
 
 .product-card__link:hover {
   color: var(--color-accent);
-}
-
-.product-card__button {
-  margin-left: var(--space-md);
 }
 
 
@@ -491,7 +486,6 @@ a.breadcrumbs__item:hover {
   border: var(--border);
   border-radius: var(--radius-md);
   padding: var(--space-lg);
-  margin-bottom: var(--space-lg);
 }
 
 .filters__title {
@@ -522,7 +516,6 @@ a.breadcrumbs__item:hover {
   border-radius: var(--radius-md);
   box-shadow: var(--shadow);
   background-color: var(--color-surface);
-  margin-bottom: var(--space-lg);
 }
 
 .product__title {
@@ -621,4 +614,136 @@ a.breadcrumbs__item:hover {
 
 .footer-nav__link:hover {
   color: var(--color-accent);
+}
+
+/* =========================================
+   15. РАСКЛАДКА: FLEXBOX И GRID
+   ========================================= */
+
+/* шапка: логотип слева, меню справа, прилипает к верху */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+/* меню в строку */
+.site-nav__list {
+  display: flex;
+  gap: var(--space-lg);
+}
+
+/* преимущества — три колонки */
+.advantages__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+}
+
+/* главная: хиты слева, «Камень дня» справа */
+.home-layout {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: var(--space-lg);
+  align-items: start;
+}
+
+/* сетка карточек — по три в ряд */
+.popular__grid,
+.catalog__products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+}
+
+/* карточка внутри — колонка */
+.product-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card__image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-bg);
+  margin-bottom: var(--space-md);
+}
+
+/* бейдж — наклейка в углу поверх картинки */
+.product-card__badge {
+  position: absolute;
+  top: -12px;
+  left: 20px;
+  z-index: 1;
+}
+
+.product-card__price {
+  margin: 0;
+}
+
+/* ссылка и кнопка — в строку, прижаты к низу карточки */
+.product-card__actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-top: auto;
+  padding-top: var(--space-md);
+}
+
+/* каталог: фильтры слева, товары справа */
+.catalog {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  grid-template-areas: "filters products";
+  gap: var(--space-lg);
+  align-items: start;
+}
+
+.filters {
+  grid-area: filters;
+  position: sticky;
+  top: 100px;
+}
+
+.catalog__products {
+  grid-area: products;
+}
+
+/* страница товара: фото слева, описание справа */
+.product {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.product__image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+/* =========================================
+   16. ДЕКОР: ЗЕРНИСТОСТЬ 
+   ========================================= */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.3;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
 }

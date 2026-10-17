@@ -26,8 +26,8 @@
 
         <nav class="site-nav" aria-label="Основная навигация">
             <ul class="site-nav__list">
-                <li class="site-nav__item"><a class="site-nav__link site-nav__link--active"
-                        href="index.html" aria-current="page">Главная</a></li>
+                <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="index.html"
+                        aria-current="page">Главная</a></li>
                 <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
                 <li class="site-nav__item"><a class="site-nav__link" href="product.html">Товар</a></li>
                 <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
@@ -69,49 +69,60 @@
 
 
 
-        <section class="popular" id="popular">
-            <h2 class="section-title">Хиты продаж</h2>
+        <div class="home-layout">
+            <section class="popular" id="popular">
+                <h2 class="section-title">Хиты продаж</h2>
 
-            <div class="popular__grid">
-                <article class="product-card">
-                    <span class="product-card__badge">Хит</span>
-                    <h3 class="product-card__title">Камень Обыкновенный</h3>
-                    <p class="product-card__description">Классика. Серый, круглый, надёжный. Ничего лишнего.</p>
-                    <p class="product-card__price">99 ₽</p>
-                    <a class="product-card__link" href="product.html">Подробнее</a>
-                    <button class="button product-card__button" type="button" data-product="Камень Обыкновенный">
-                        Заказать
-                    </button>
+                <div class="popular__grid">
+                    <article class="product-card">
+                        <img class="product-card__image" src="images/rock-1.webp" alt="Камень Обыкновенный" width="300"
+                            height="300">
+                        <span class="product-card__badge">Хит</span>
+                        <p class="product-card__price">99 ₽</p>
+                        <h3 class="product-card__title">Камень Обыкновенный</h3>
+                        <p class="product-card__description">Классика. Серый, круглый, надёжный. Ничего лишнего.</p>
+                        <div class="product-card__actions">
+                            <a class="product-card__link" href="product.html">Подробнее</a>
+                            <button class="button product-card__button" type="button"
+                                data-product="Камень Обыкновенный">Заказать</button>
+                        </div>
+                    </article>
 
-                </article>
+                    <article class="product-card">
+                        <img class="product-card__image" src="images/rock-2.webp" alt="Большой камень" width="300"
+                            height="300">
+                        <span class="product-card__badge">Новинка</span>
+                        <p class="product-card__price">4999 ₽</p>
+                        <h3 class="product-card__title">Большой камень</h3>
+                        <p class="product-card__description">Реально большой. Давит. Всегда рядом.</p>
+                        <div class="product-card__actions">
+                            <a class="product-card__link" href="product.html">Подробнее</a>
+                            <button class="button product-card__button" type="button"
+                                data-product="Большой камень">Заказать</button>
+                        </div>
+                    </article>
 
-                <article class="product-card">
-                    <span class="product-card__badge">Новинка</span>
-                    <h3 class="product-card__title">Большой камень</h3>
-                    <p class="product-card__description">Реально большой. Давит. Всегда рядом.</p>
-                    <p class="product-card__price">4999 ₽</p>
-                    <a class="product-card__link" href="product.html">Подробнее</a>
-                    <button class="button product-card__button" type="button" data-product="Большой камень">
-                        Заказать
-                    </button>
-                </article>
+                    <article class="product-card">
+                        <img class="product-card__image" src="images/rock-3.webp" alt="Камень «Люкс»" width="300"
+                            height="300">
+                        <p class="product-card__price">9999 ₽</p>
+                        <h3 class="product-card__title">Камень «Люкс»</h3>
+                        <p class="product-card__description">Камень подороже.</p>
+                        <div class="product-card__actions">
+                            <a class="product-card__link" href="product.html">Подробнее</a>
+                            <button class="button product-card__button" type="button" data-product="Камень «Люкс»"
+                                disabled>Нет в наличии</button>
+                        </div>
+                    </article>
+                </div>
+            </section>
 
-                <article class="product-card">
-                    <h3 class="product-card__title">Камень «Люкс»</h3>
-                    <p class="product-card__description">Камень подороже.</p>
-                    <p class="product-card__price">9999 ₽</p>
-                    <a class="product-card__link" href="product.html">Подробнее</a>
-                    <button class="button product-card__button" type="button" data-product="Камень «Люкс»" disabled>
-                        Нет в наличии
-                    </button>
-                </article>
-            </div>
-        </section>
+            <aside class="promo">
+                <h2 class="promo__title">Камень дня</h2>
+                <p class="promo__text">Камень с глазками — скидка 20%. Он смотрит на вас. Купите его.</p>
+            </aside>
+        </div>
 
-        <aside class="promo">
-            <h2 class="promo__title">Камень дня</h2>
-            <p class="promo__text">Камень с глазками - скидка 20%. Он смотрит на вас. Купите его.</p>
-        </aside>
 
 
         <!-- модальное окно -->
