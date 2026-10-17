@@ -14,6 +14,8 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+
 </head>
 
 <body>
@@ -40,6 +42,7 @@
             <h1 class="hero__title">Камни, которые <span class="hero__accent">ничего</span> не&nbsp;делают</h1>
             <p class="hero__text">Не ломаются, не разряжаются, не требуют обновлений. Просто лежат. Идеально.</p>
             <a class="button" href="catalog.html">Смотреть каталог</a>
+
         </section>
 
         <section class="advantages" id="advantages">
@@ -72,6 +75,10 @@
                     <p class="product-card__description">Классика. Серый, круглый, надёжный. Ничего лишнего.</p>
                     <p class="product-card__price">99 ₽</p>
                     <a class="product-card__link" href="product.html">Подробнее</a>
+                    <button class="button product-card__button" type="button" data-product="Камень Обыкновенный">
+                        Заказать
+                    </button>
+
                 </article>
 
                 <article class="product-card">
@@ -80,13 +87,19 @@
                     <p class="product-card__description">Реально большой. Давит. Всегда рядом.</p>
                     <p class="product-card__price">4999 ₽</p>
                     <a class="product-card__link" href="product.html">Подробнее</a>
+                    <button class="button product-card__button" type="button" data-product="Большой камень">
+                        Заказать
+                    </button>
                 </article>
 
                 <article class="product-card">
                     <h3 class="product-card__title">Камень «Люкс»</h3>
                     <p class="product-card__description">Камень подороже.</p>
-                    <p class="product-card__price">999 ₽</p>
+                    <p class="product-card__price">9999 ₽</p>
                     <a class="product-card__link" href="product.html">Подробнее</a>
+                    <button class="button product-card__button" type="button" data-product="Камень «Люкс»">
+                        Заказать
+                    </button>
                 </article>
             </div>
         </section>
@@ -95,6 +108,71 @@
             <h2 class="promo__title">Камень дня</h2>
             <p class="promo__text">Камень с глазками - скидка 20%. Он смотрит на вас. Купите его.</p>
         </aside>
+
+
+        <!-- модальное окно -->
+        <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
+            <h2 class="order-dialog__title" id="order-dialog-title">Оформление заявки</h2>
+
+            <form class="order-form" id="order-form" action="#" method="post" novalidate>
+                <input id="selected-product" name="selected-product" type="hidden">
+
+                <div class="order-form__field">
+                    <label class="order-form__label" for="order-name">Имя</label>
+                    <input class="order-form__input" id="order-name" name="name" type="text"
+                        placeholder="Как вас зовут?" minlength="2" autocomplete="given-name" required>
+                </div>
+
+                <div class="order-form__field">
+                    <label class="order-form__label" for="order-email">E-mail</label>
+                    <input class="order-form__input" id="order-email" name="email" type="email"
+                        placeholder="example@mail.ru" autocomplete="email" required>
+                </div>
+
+                <div class="order-form__field">
+                    <label class="order-form__label" for="order-phone">Телефон</label>
+                    <input class="order-form__input" id="order-phone" name="phone" type="tel" inputmode="tel"
+                        placeholder="+7 (900) 000-00-00" pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$" required>
+                    <small class="order-form__hint">Формат: +7 (900) 000-00-00</small>
+                </div>
+
+                <div class="order-form__field">
+                    <label class="order-form__label" for="order-date">Когда доставить камень</label>
+                    <input class="order-form__input" id="order-date" name="date" type="date">
+                </div>
+
+                <div class="order-form__field">
+                    <label class="order-form__label" for="order-topic">Тема заявки</label>
+                    <select class="order-form__input" id="order-topic" name="topic" required>
+                        <option value="">Выберите тему</option>
+                        <option value="product">Заказ камня</option>
+                        <option value="consultation">Консультация по камням</option>
+                        <option value="delivery">Доставка</option>
+                    </select>
+                </div>
+
+                <div class="order-form__field">
+                    <label class="order-form__label" for="order-comment">Комментарий</label>
+                    <textarea class="order-form__input" id="order-comment" name="comment" rows="4"
+                        placeholder="Пожелания к камню"></textarea>
+                </div>
+
+                <div class="order-form__field order-form__field--checkbox">
+                    <input id="order-agreement" name="agreement" type="checkbox" required>
+                    <label for="order-agreement">Я согласен на обработку данных</label>
+                </div>
+
+                <div class="order-form__actions">
+                    <button class="button button--ghost" type="button" id="close-order-dialog">Закрыть</button>
+                    <button class="button" type="submit">Отправить заявку</button>
+                </div>
+            </form>
+        </dialog>
+
+        <p class="success-message" id="success-message" role="status" hidden>
+            Форма успешно отправлена! Камень уже собирается в путь.
+        </p>
+
     </main>
 
 
@@ -103,7 +181,7 @@
 
     <footer class="site-footer" id="contacts">
         <p class="site-footer__text">© 2026 RockRockRock. Все камни защищены.</p>
-        <p class="site-footer__text">Почта: rockrock@.rock · Телефон: +7 (900) 000-00-00</p>
+        <p class="site-footer__text">Почта: rockrock@ro.ck · Телефон: +7 (900) 000-00-00</p>
     </footer>
 </body>
 
