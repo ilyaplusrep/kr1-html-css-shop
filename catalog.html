@@ -35,8 +35,8 @@
 
     <main class="page">
         <nav class="breadcrumbs" aria-label="Хлебные крошки">
-            <a class="breadcrumbs__item" href="index.html">Главная</a>
-            <span class="breadcrumbs__item" aria-current="page">Каталог</span>
+            <a class="breadcrumbs__item breadcrumbs__link" href="index.html">Главная</a>
+            <span class="breadcrumbs__item breadcrumbs__item--current" aria-current="page">Каталог</span>
         </nav>
 
         <h1 class="page-title">Каталог камней</h1>
@@ -47,19 +47,19 @@
 
                 <h3 class="filters__subtitle">Категория</h3>
                 <ul class="filters__list">
-                    <li><label class="filters__option"><input type="checkbox" name="category" value="office">
+                    <li class="filters__item"><label class="filters__option"><input class="filters__checkbox" type="checkbox" name="category" value="office">
                             Офисные</label></li>
-                    <li><label class="filters__option"><input type="checkbox" name="category" value="gift">
+                    <li class="filters__item"><label class="filters__option"><input class="filters__checkbox" type="checkbox" name="category" value="gift">
                             Подарочные</label></li>
-                    <li><label class="filters__option"><input type="checkbox" name="category" value="premium">
+                    <li class="filters__item"><label class="filters__option"><input class="filters__checkbox" type="checkbox" name="category" value="premium">
                             Премиум</label></li>
-                    <li><label class="filters__option"><input type="checkbox" name="category" value="budget"> Для
+                    <li class="filters__item"><label class="filters__option"><input class="filters__checkbox" type="checkbox" name="category" value="budget"> Для
                             бедных</label></li>
                 </ul>
 
                 <h3 class="filters__subtitle">Наличие</h3>
                 <ul class="filters__list">
-                    <li><label class="filters__option"><input type="checkbox" name="stock" value="yes"> Только в
+                    <li class="filters__item"><label class="filters__option"><input class="filters__checkbox" type="checkbox" name="stock" value="yes"> Только в
                             наличии</label></li>
                 </ul>
             </aside>
@@ -68,7 +68,7 @@
                 <article class="product-card">
                     <img class="product-card__image" src="images/rock-1.webp" alt="Камень Обыкновенный" width="300"
                         height="300">
-                    <span class="product-card__badge">Хит</span>
+                    <span class="product-card__badge badge badge--hit">Хит</span>
                     <p class="product-card__price">99 ₽</p>
                     <h3 class="product-card__title">Камень Обыкновенный</h3>
                     <p class="product-card__description">Классика. Серый, круглый, надёжный.</p>
@@ -80,7 +80,7 @@
                 <article class="product-card">
                     <img class="product-card__image" src="images/rock-2.webp" alt="Большой камень" width="300"
                         height="300">
-                    <span class="product-card__badge">Новинка</span>
+                    <span class="product-card__badge badge badge--new">Новинка</span>
                     <p class="product-card__price">4999 ₽</p>
                     <h3 class="product-card__title">Большой камень</h3>
                     <p class="product-card__description">Реально большой. Давит. Всегда рядом.</p>
@@ -89,7 +89,7 @@
                     </div>
                 </article>
 
-                <article class="product-card">
+                <article class="product-card product-card--soldout">
                     <img class="product-card__image" src="images/rock-3.webp" alt="Камень «Люкс»" width="300"
                         height="300">
                     <p class="product-card__price">9999 ₽</p>
@@ -114,7 +114,7 @@
                 <article class="product-card">
                     <img class="product-card__image" src="images/rock-5.webp" alt="Камень с глазками" width="300"
                         height="300">
-                    <span class="product-card__badge">Скидка</span>
+                    <span class="product-card__badge badge badge--sale">Скидка</span>
                     <p class="product-card__price">199 ₽</p>
                     <h3 class="product-card__title">Камень с глазками</h3>
                     <p class="product-card__description">Смотрит на вас. Всегда.</p>
@@ -140,10 +140,10 @@
     <footer class="site-footer" id="contacts">
         <nav class="footer-nav" aria-label="Быстрые ссылки">
             <ul class="footer-nav__list">
-                <li><a class="footer-nav__link" href="index.html#advantages">Почему камни</a></li>
-                <li><a class="footer-nav__link" href="index.html#popular">Хиты продаж</a></li>
-                <li><a class="footer-nav__link" href="catalog.html#filters">Фильтры каталога</a></li>
-                <li><a class="footer-nav__link" href="contacts.html#address">Как нас найти</a></li>
+                <li class="footer-nav__item"><a class="footer-nav__link" href="index.html#advantages">Почему камни</a></li>
+                <li class="footer-nav__item"><a class="footer-nav__link" href="index.html#popular">Хиты продаж</a></li>
+                <li class="footer-nav__item"><a class="footer-nav__link" href="catalog.html#filters">Фильтры каталога</a></li>
+                <li class="footer-nav__item"><a class="footer-nav__link" href="contacts.html#address">Как нас найти</a></li>
             </ul>
         </nav>
         <p class="site-footer__text">© 2026 RockRockRock. Все камни защищены.</p>

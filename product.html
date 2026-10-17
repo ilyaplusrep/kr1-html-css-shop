@@ -32,16 +32,16 @@
 
     <main class="page">
         <nav class="breadcrumbs" aria-label="Хлебные крошки">
-            <a class="breadcrumbs__item" href="index.html">Главная</a>
-            <a class="breadcrumbs__item" href="catalog.html">Каталог</a>
-            <span class="breadcrumbs__item" aria-current="page">Камень Обыкновенный</span>
+            <a class="breadcrumbs__item breadcrumbs__link" href="index.html">Главная</a>
+            <a class="breadcrumbs__item breadcrumbs__link" href="catalog.html">Каталог</a>
+            <span class="breadcrumbs__item breadcrumbs__item--current" aria-current="page">Камень Обыкновенный</span>
         </nav>
 
         <article class="product">
             <img class="product__image" src="images/rock-1.webp" alt="Серый круглый камень на светлом фоне" width="480" height="480">
 
             <div class="product__info">
-                <span class="product-card__badge">Хит</span>
+                <span class="product__badge badge badge--hit">Хит</span>
                 <h1 class="product__title">Камень Обыкновенный</h1>
                 <p class="product__text">Классика жанра. Серый, круглый, надёжный. Не требует зарядки, обновлений и внимания. Идеально лежит на столе, полке или в кармане.</p>
                 <p class="product__price">99 ₽</p>
@@ -53,35 +53,35 @@
             <table class="specs">
                 <caption class="specs__caption">Характеристики камня</caption>
                 <thead>
-                    <tr>
-                        <th scope="col">Параметр</th>
-                        <th scope="col">Значение</th>
+                    <tr class="specs__row specs__row--head">
+                        <th class="specs__cell specs__cell--head" scope="col">Параметр</th>
+                        <th class="specs__cell specs__cell--head" scope="col">Значение</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">Вес</th>
-                        <td>450 г</td>
+                    <tr class="specs__row">
+                        <th class="specs__cell specs__cell--title" scope="row">Вес</th>
+                        <td class="specs__cell">450 г</td>
                     </tr>
-                    <tr>
-                        <th scope="row">Твёрдость по Моосу</th>
-                        <td>6</td>
+                    <tr class="specs__row">
+                        <th class="specs__cell specs__cell--title" scope="row">Твёрдость по Моосу</th>
+                        <td class="specs__cell">6</td>
                     </tr>
-                    <tr>
-                        <th scope="row">Уровень спокойствия</th>
-                        <td>10 из 10</td>
+                    <tr class="specs__row">
+                        <th class="specs__cell specs__cell--title" scope="row">Уровень спокойствия</th>
+                        <td class="specs__cell">10 из 10</td>
                     </tr>
-                    <tr>
-                        <th scope="row">Полезность</th>
-                        <td>0</td>
+                    <tr class="specs__row">
+                        <th class="specs__cell specs__cell--title" scope="row">Полезность</th>
+                        <td class="specs__cell">0</td>
                     </tr>
-                    <tr>
-                        <th scope="row">Требует ухода</th>
-                        <td>Нет</td>
+                    <tr class="specs__row">
+                        <th class="specs__cell specs__cell--title" scope="row">Требует ухода</th>
+                        <td class="specs__cell">Нет</td>
                     </tr>
-                    <tr>
-                        <th scope="row">Гарантия</th>
-                        <td>Вечная — он камень</td>
+                    <tr class="specs__row">
+                        <th class="specs__cell specs__cell--title" scope="row">Гарантия</th>
+                        <td class="specs__cell">Вечная — он камень</td>
                     </tr>
                 </tbody>
             </table>
@@ -91,10 +91,10 @@
     <footer class="site-footer" id="contacts">
         <nav class="footer-nav" aria-label="Быстрые ссылки">
             <ul class="footer-nav__list">
-                <li><a class="footer-nav__link" href="index.html#advantages">Почему камни</a></li>
-                <li><a class="footer-nav__link" href="index.html#popular">Хиты продаж</a></li>
-                <li><a class="footer-nav__link" href="catalog.html#filters">Фильтры каталога</a></li>
-                <li><a class="footer-nav__link" href="contacts.html#address">Как нас найти</a></li>
+                <li class="footer-nav__item"><a class="footer-nav__link" href="index.html#advantages">Почему камни</a></li>
+                <li class="footer-nav__item"><a class="footer-nav__link" href="index.html#popular">Хиты продаж</a></li>
+                <li class="footer-nav__item"><a class="footer-nav__link" href="catalog.html#filters">Фильтры каталога</a></li>
+                <li class="footer-nav__item"><a class="footer-nav__link" href="contacts.html#address">Как нас найти</a></li>
             </ul>
         </nav>
         <p class="site-footer__text">© 2026 RockRockRock. Все камни защищены.</p>
