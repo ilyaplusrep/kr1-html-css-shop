@@ -77,7 +77,7 @@
                     <article class="product-card">
                         <img class="product-card__image" src="images/rock-1.webp" alt="Камень Обыкновенный" width="300"
                             height="300">
-                        <span class="product-card__badge">Хит</span>
+                        <span class="product-card__badge badge badge--hit">Хит</span>
                         <p class="product-card__price">99 ₽</p>
                         <h3 class="product-card__title">Камень Обыкновенный</h3>
                         <p class="product-card__description">Классика. Серый, круглый, надёжный. Ничего лишнего.</p>
@@ -91,7 +91,7 @@
                     <article class="product-card">
                         <img class="product-card__image" src="images/rock-2.webp" alt="Большой камень" width="300"
                             height="300">
-                        <span class="product-card__badge">Новинка</span>
+                        <span class="product-card__badge badge badge--new">Новинка</span>
                         <p class="product-card__price">4999 ₽</p>
                         <h3 class="product-card__title">Большой камень</h3>
                         <p class="product-card__description">Реально большой. Давит. Всегда рядом.</p>
@@ -102,7 +102,7 @@
                         </div>
                     </article>
 
-                    <article class="product-card">
+                    <article class="product-card product-card--soldout">
                         <img class="product-card__image" src="images/rock-3.webp" alt="Камень «Люкс»" width="300"
                             height="300">
                         <p class="product-card__price">9999 ₽</p>
@@ -173,8 +173,8 @@
                 </div>
 
                 <div class="order-form__field order-form__field--checkbox">
-                    <input id="order-agreement" name="agreement" type="checkbox" required>
-                    <label for="order-agreement">Я согласен на обработку данных</label>
+                    <input class="order-form__checkbox" id="order-agreement" name="agreement" type="checkbox" required>
+                    <label class="order-form__checkbox-label" for="order-agreement">Я согласен на обработку данных</label>
                 </div>
 
                 <div class="order-form__actions">
@@ -197,10 +197,10 @@
     <footer class="site-footer" id="contacts">
         <nav class="footer-nav" aria-label="Быстрые ссылки">
             <ul class="footer-nav__list">
-                <li><a class="footer-nav__link" href="index.html#advantages">Почему камни</a></li>
-                <li><a class="footer-nav__link" href="index.html#popular">Хиты продаж</a></li>
-                <li><a class="footer-nav__link" href="catalog.html#filters">Фильтры каталога</a></li>
-                <li><a class="footer-nav__link" href="contacts.html#address">Как нас найти</a></li>
+                <li class="footer-nav__item"><a class="footer-nav__link" href="index.html#advantages">Почему камни</a></li>
+                <li class="footer-nav__item"><a class="footer-nav__link" href="index.html#popular">Хиты продаж</a></li>
+                <li class="footer-nav__item"><a class="footer-nav__link" href="catalog.html#filters">Фильтры каталога</a></li>
+                <li class="footer-nav__item"><a class="footer-nav__link" href="contacts.html#address">Как нас найти</a></li>
             </ul>
         </nav>
         <p class="site-footer__text">© 2026 RockRockRock. Все камни защищены.</p>

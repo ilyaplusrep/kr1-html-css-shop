@@ -32,8 +32,8 @@
 
     <main class="page">
         <nav class="breadcrumbs" aria-label="Хлебные крошки">
-            <a class="breadcrumbs__item" href="index.html">Главная</a>
-            <span class="breadcrumbs__item" aria-current="page">Заявка</span>
+            <a class="breadcrumbs__item breadcrumbs__link" href="index.html">Главная</a>
+            <span class="breadcrumbs__item breadcrumbs__item--current" aria-current="page">Заявка</span>
         </nav>
 
         <h1 class="page-title">Оформление заявки</h1>
@@ -83,8 +83,8 @@
                 </div>
 
                 <div class="order-form__field order-form__field--checkbox">
-                    <input id="order-agreement" name="agreement" type="checkbox" required>
-                    <label for="order-agreement">Я согласен на обработку данных</label>
+                    <input class="order-form__checkbox" id="order-agreement" name="agreement" type="checkbox" required>
+                    <label class="order-form__checkbox-label" for="order-agreement">Я согласен на обработку данных</label>
                 </div>
 
                 <div class="order-form__actions">
@@ -101,10 +101,10 @@
     <footer class="site-footer" id="contacts">
         <nav class="footer-nav" aria-label="Быстрые ссылки">
             <ul class="footer-nav__list">
-                <li><a class="footer-nav__link" href="index.html#advantages">Почему камни</a></li>
-                <li><a class="footer-nav__link" href="index.html#popular">Хиты продаж</a></li>
-                <li><a class="footer-nav__link" href="catalog.html#filters">Фильтры каталога</a></li>
-                <li><a class="footer-nav__link" href="contacts.html#address">Как нас найти</a></li>
+                <li class="footer-nav__item"><a class="footer-nav__link" href="index.html#advantages">Почему камни</a></li>
+                <li class="footer-nav__item"><a class="footer-nav__link" href="index.html#popular">Хиты продаж</a></li>
+                <li class="footer-nav__item"><a class="footer-nav__link" href="catalog.html#filters">Фильтры каталога</a></li>
+                <li class="footer-nav__item"><a class="footer-nav__link" href="contacts.html#address">Как нас найти</a></li>
             </ul>
         </nav>
         <p class="site-footer__text">© 2026 RockRockRock. Все камни защищены.</p>
