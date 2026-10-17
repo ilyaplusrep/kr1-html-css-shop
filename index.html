@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RockRockRock</title>
-    <meta name="description" content="Интернет-магазин камней.">
+    <title>RockRockRock - камни, которые ничего не делают</title>
+    <meta name="description"
+        content="Интернет-магазин камней: офисные, подарочные и премиальные камни. Хиты продаж и доставка.">
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,10 +24,10 @@
     <header class="site-header">
         <a class="site-header__logo" href="index.html">RockRockRock</a>
 
-        <nav class="site-nav">
+        <nav class="site-nav" aria-label="Основная навигация">
             <ul class="site-nav__list">
                 <li class="site-nav__item"><a class="site-nav__link site-nav__link--active"
-                        href="index.html">Главная</a></li>
+                        href="index.html" aria-current="page">Главная</a></li>
                 <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
                 <li class="site-nav__item"><a class="site-nav__link" href="product.html">Товар</a></li>
                 <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
@@ -42,6 +44,8 @@
             <h1 class="hero__title">Камни, которые <span class="hero__accent">ничего</span> не&nbsp;делают</h1>
             <p class="hero__text">Не ломаются, не разряжаются, не требуют обновлений. Просто лежат. Идеально.</p>
             <a class="button" href="catalog.html">Смотреть каталог</a>
+            <a class="hero__link" href="#advantages">Почему камни?</a>
+
 
         </section>
 
@@ -180,9 +184,18 @@
 
 
     <footer class="site-footer" id="contacts">
+        <nav class="footer-nav" aria-label="Быстрые ссылки">
+            <ul class="footer-nav__list">
+                <li><a class="footer-nav__link" href="index.html#advantages">Почему камни</a></li>
+                <li><a class="footer-nav__link" href="index.html#popular">Хиты продаж</a></li>
+                <li><a class="footer-nav__link" href="catalog.html#filters">Фильтры каталога</a></li>
+                <li><a class="footer-nav__link" href="contacts.html#address">Как нас найти</a></li>
+            </ul>
+        </nav>
         <p class="site-footer__text">© 2026 RockRockRock. Все камни защищены.</p>
         <p class="site-footer__text">Почта: rockrock@ro.ck · Телефон: +7 (900) 000-00-00</p>
     </footer>
+
 </body>
 
 </html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог камней — RockRockRock</title>
+    <meta name="description" content="Все камни магазина: фильтры по категориям, цены и наличие.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@700;900&family=Manrope:wght@400;500;600;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <a class="site-header__logo" href="index.html">RockRockRock</a>
+
+        <nav class="site-nav" aria-label="Основная навигация">
+            <ul class="site-nav__list">
+                <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+                <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="catalog.html" aria-current="page">Каталог</a></li>
+                <li class="site-nav__item"><a class="site-nav__link" href="product.html">Товар</a></li>
+                <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
+                <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page">
+        <nav class="breadcrumbs" aria-label="Хлебные крошки">
+            <a class="breadcrumbs__item" href="index.html">Главная</a>
+            <span class="breadcrumbs__item" aria-current="page">Каталог</span>
+        </nav>
+
+        <h1 class="page-title">Каталог камней</h1>
+
+        <div class="catalog">
+            <aside class="filters" id="filters">
+                <h2 class="filters__title">Фильтры</h2>
+
+                <h3 class="filters__subtitle">Категория</h3>
+                <ul class="filters__list">
+                    <li><label class="filters__option"><input type="checkbox" name="category" value="office"> Офисные</label></li>
+                    <li><label class="filters__option"><input type="checkbox" name="category" value="gift"> Подарочные</label></li>
+                    <li><label class="filters__option"><input type="checkbox" name="category" value="premium"> Премиум</label></li>
+                    <li><label class="filters__option"><input type="checkbox" name="category" value="budget"> Для бедных</label></li>
+                </ul>
+
+                <h3 class="filters__subtitle">Наличие</h3>
+                <ul class="filters__list">
+                    <li><label class="filters__option"><input type="checkbox" name="stock" value="yes"> Только в наличии</label></li>
+                </ul>
+            </aside>
+
+            <section class="catalog__products" aria-label="Список товаров">
+                <article class="product-card">
+                    <span class="product-card__badge">Хит</span>
+                    <h3 class="product-card__title">Камень Обыкновенный</h3>
+                    <p class="product-card__description">Классика. Серый, круглый, надёжный.</p>
+                    <p class="product-card__price">99 ₽</p>
+                    <a class="product-card__link" href="product.html">Подробнее</a>
+                </article>
+
+                <article class="product-card">
+                    <span class="product-card__badge">Новинка</span>
+                    <h3 class="product-card__title">Большой камень</h3>
+                    <p class="product-card__description">Реально большой. Давит. Всегда рядом.</p>
+                    <p class="product-card__price">4999 ₽</p>
+                    <a class="product-card__link" href="product.html">Подробнее</a>
+                </article>
+
+                <article class="product-card">
+                    <h3 class="product-card__title">Камень «Люкс»</h3>
+                    <p class="product-card__description">Камень подороже. Временно закончился.</p>
+                    <p class="product-card__price">9999 ₽</p>
+                    <a class="product-card__link" href="product.html">Подробнее</a>
+                </article>
+
+                <article class="product-card">
+                    <h3 class="product-card__title">Маленький камень</h3>
+                    <p class="product-card__description">Маленький, бесполезный.</p>
+                    <p class="product-card__price">49 ₽</p>
+                    <a class="product-card__link" href="product.html">Подробнее</a>
+                </article>
+
+                <article class="product-card">
+                    <span class="product-card__badge">Скидка</span>
+                    <h3 class="product-card__title">Камень с глазками</h3>
+                    <p class="product-card__description">Смотрит на вас. Всегда.</p>
+                    <p class="product-card__price">199 ₽</p>
+                    <a class="product-card__link" href="product.html">Подробнее</a>
+                </article>
+
+                <article class="product-card">
+                    <h3 class="product-card__title">Драгоценный камень</h3>
+                    <p class="product-card__description">На самом деле нет.</p>
+                    <p class="product-card__price">1999 ₽</p>
+                    <a class="product-card__link" href="product.html">Подробнее</a>
+                </article>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer" id="contacts">
+        <nav class="footer-nav" aria-label="Быстрые ссылки">
+            <ul class="footer-nav__list">
+                <li><a class="footer-nav__link" href="index.html#advantages">Почему камни</a></li>
+                <li><a class="footer-nav__link" href="index.html#popular">Хиты продаж</a></li>
+                <li><a class="footer-nav__link" href="catalog.html#filters">Фильтры каталога</a></li>
+                <li><a class="footer-nav__link" href="contacts.html#address">Как нас найти</a></li>
+            </ul>
+        </nav>
+        <p class="site-footer__text">© 2026 RockRockRock. Все камни защищены.</p>
+        <p class="site-footer__text">Почта: rockrock@ro.ck · Телефон: +7 (900) 000-00-00</p>
+    </footer>
+</body>
+
+</html>

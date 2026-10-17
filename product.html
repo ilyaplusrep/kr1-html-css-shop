@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Камень Обыкновенный — RockRockRock</title>
+    <meta name="description" content="Камень Обыкновенный: характеристики, цена и оформление заявки.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@700;900&family=Manrope:wght@400;500;600;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <a class="site-header__logo" href="index.html">RockRockRock</a>
+
+        <nav class="site-nav" aria-label="Основная навигация">
+            <ul class="site-nav__list">
+                <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+                <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+                <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="product.html" aria-current="page">Товар</a></li>
+                <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
+                <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page">
+        <nav class="breadcrumbs" aria-label="Хлебные крошки">
+            <a class="breadcrumbs__item" href="index.html">Главная</a>
+            <a class="breadcrumbs__item" href="catalog.html">Каталог</a>
+            <span class="breadcrumbs__item" aria-current="page">Камень Обыкновенный</span>
+        </nav>
+
+        <article class="product">
+            <img class="product__image" src="images/rock-1.jpg" alt="Серый круглый камень на светлом фоне" width="480" height="480">
+
+            <div class="product__info">
+                <span class="product-card__badge">Хит</span>
+                <h1 class="product__title">Камень Обыкновенный</h1>
+                <p class="product__text">Классика жанра. Серый, круглый, надёжный. Не требует зарядки, обновлений и внимания. Идеально лежит на столе, полке или в кармане.</p>
+                <p class="product__price">99 ₽</p>
+                <a class="button" href="order.html">Оформить заявку</a>
+            </div>
+        </article>
+
+        <section class="specs-section">
+            <table class="specs">
+                <caption class="specs__caption">Характеристики камня</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Параметр</th>
+                        <th scope="col">Значение</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Вес</th>
+                        <td>450 г</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Твёрдость по Моосу</th>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Уровень спокойствия</th>
+                        <td>10 из 10</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Полезность</th>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Требует ухода</th>
+                        <td>Нет</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Гарантия</th>
+                        <td>Вечная — он камень</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer class="site-footer" id="contacts">
+        <nav class="footer-nav" aria-label="Быстрые ссылки">
+            <ul class="footer-nav__list">
+                <li><a class="footer-nav__link" href="index.html#advantages">Почему камни</a></li>
+                <li><a class="footer-nav__link" href="index.html#popular">Хиты продаж</a></li>
+                <li><a class="footer-nav__link" href="catalog.html#filters">Фильтры каталога</a></li>
+                <li><a class="footer-nav__link" href="contacts.html#address">Как нас найти</a></li>
+            </ul>
+        </nav>
+        <p class="site-footer__text">© 2026 RockRockRock. Все камни защищены.</p>
+        <p class="site-footer__text">Почта: rockrock@ro.ck · Телефон: +7 (900) 000-00-00</p>
+    </footer>
+</body>
+
+</html>
