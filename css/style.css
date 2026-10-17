@@ -126,9 +126,24 @@ button:focus-visible {
   margin-bottom: var(--space-lg);
 }
 
+/* заголовок раздела — с цветной полосой-маркером под текстом */
 .section-title {
+  position: relative;
+  display: inline-block;
   font-size: 40px;
   margin-bottom: var(--space-lg);
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: -6px;
+  right: -6px;
+  bottom: 4px;
+  z-index: -1;
+  height: 14px;
+  background-color: var(--color-accent-2);
+  transform: rotate(-1deg);
 }
 
 
@@ -287,11 +302,17 @@ button:focus-visible {
   padding: var(--space-xl) 0;
 }
 
+/* надпись над заголовком — наклейка */
 .hero__label {
+  display: inline-block;
+  padding: 4px 12px;
+  border: 2px solid var(--color-border);
+  background-color: var(--color-accent-2);
+  color: var(--color-text);
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--color-text-muted);
+  transform: rotate(-2deg);
 }
 
 .hero__title {
@@ -332,9 +353,39 @@ button:focus-visible {
 }
 
 .advantages__list {
+  counter-reset: advantage;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-lg);
+}
+
+/* карточки-наклейки с номерами, которые CSS считает сам */
+.advantages__item {
+  counter-increment: advantage;
+  position: relative;
+  padding: var(--space-lg) var(--space-lg) var(--space-lg) 88px;
+  background-color: var(--color-surface);
+  border: var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow);
+}
+
+.advantages__item::before {
+  content: counter(advantage);
+  position: absolute;
+  top: var(--space-lg);
+  left: var(--space-lg);
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--color-border);
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  color: var(--color-surface);
+  font-family: var(--font-title);
+  font-size: 22px;
+  font-weight: 900;
 }
 
 .advantages__title {
@@ -362,11 +413,14 @@ button:focus-visible {
   gap: var(--space-lg);
 }
 
+/* «Камень дня» — слегка наклеен криво */
 .promo {
+  padding: var(--space-lg);
   background-color: var(--color-accent-2);
   border: var(--border);
   border-radius: var(--radius-md);
-  padding: var(--space-lg);
+  box-shadow: var(--shadow);
+  transform: rotate(1.5deg);
 }
 
 .promo__title {
@@ -374,9 +428,91 @@ button:focus-visible {
   margin-bottom: var(--space-sm);
 }
 
+.promo__link {
+  display: inline-block;
+  margin-top: var(--space-md);
+  font-weight: 800;
+}
+
+.promo__link:hover {
+  color: var(--color-accent);
+}
+
 
 /* =========================================
-   11. КАРТОЧКА ТОВАРА
+   11. FAQ — ЧАСТЫЕ ВОПРОСЫ
+   ========================================= */
+.faq {
+  margin-bottom: var(--space-xl);
+}
+
+.faq__list {
+  display: grid;
+  gap: var(--space-md);
+  max-width: 760px;
+}
+
+.faq__item {
+  background-color: var(--color-surface);
+  border: var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow);
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+/* атрибут open браузер ставит сам, когда вопрос раскрыт */
+.faq__item[open] {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.faq__question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  font-weight: 800;
+  font-size: 18px;
+  cursor: pointer;
+  list-style: none;
+}
+
+/* убираем стандартный треугольник (Chrome/Safari) */
+.faq__question::-webkit-details-marker {
+  display: none;
+}
+
+/* свой значок «+» справа от вопроса */
+.faq__question::after {
+  content: "+";
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--color-border);
+  border-radius: 50%;
+  background-color: var(--color-accent-2);
+  font-size: 20px;
+  transition: transform var(--transition);
+}
+
+/* открытый вопрос: «+» поворачивается в «×» */
+.faq__item[open] .faq__question::after {
+  transform: rotate(45deg);
+  background-color: var(--color-accent);
+  color: var(--color-surface);
+}
+
+.faq__answer {
+  padding: 0 var(--space-lg) var(--space-md);
+  color: var(--color-text-muted);
+}
+
+
+/* =========================================
+   12. КАРТОЧКА ТОВАРА
    ========================================= */
 .product-card {
   position: relative;
@@ -455,7 +591,7 @@ button:focus-visible {
 
 
 /* =========================================
-   12. КАТАЛОГ И ФИЛЬТРЫ
+   13. КАТАЛОГ И ФИЛЬТРЫ
    ========================================= */
 .catalog {
   display: grid;
@@ -502,7 +638,7 @@ button:focus-visible {
 
 
 /* =========================================
-   13. СТРАНИЦА ТОВАРА И ТАБЛИЦА
+   14. СТРАНИЦА ТОВАРА И ТАБЛИЦА
    ========================================= */
 .product {
   display: grid;
@@ -581,7 +717,7 @@ button:focus-visible {
 
 
 /* =========================================
-   14. МОДАЛЬНОЕ ОКНО
+   15. МОДАЛЬНОЕ ОКНО
    ========================================= */
 .order-dialog {
   width: min(100% - 32px, 560px);
@@ -604,7 +740,7 @@ button:focus-visible {
 
 
 /* =========================================
-   15. ФОРМА ЗАЯВКИ
+   16. ФОРМА ЗАЯВКИ
    ========================================= */
 .order-page {
   max-width: 560px;
@@ -695,7 +831,7 @@ button:focus-visible {
 
 
 /* =========================================
-   16. КОНТАКТЫ
+   17. КОНТАКТЫ
    ========================================= */
 .contacts {
   margin-bottom: var(--space-xl);
@@ -726,7 +862,7 @@ button:focus-visible {
 
 
 /* =========================================
-   17. ПОДВАЛ
+   18. ПОДВАЛ
    ========================================= */
 .site-footer {
   padding: var(--space-lg);
@@ -755,7 +891,7 @@ button:focus-visible {
 
 
 /* =========================================
-   18. ДЕКОР: ЗЕРНИСТОСТЬ ФОНА
+   19. ДЕКОР: ЗЕРНИСТОСТЬ ФОНА
    ========================================= */
 body::before {
   content: "";
